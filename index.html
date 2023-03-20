@@ -428,27 +428,15 @@ pre {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script src="jquery.flexslider.js"></script>
 <script type="text/javascript" charset="utf-8">
-	  $(window).load(function() {
-	    $('.flexslider').flexslider({
-                slideshow: true,
-                animation: "fade",
-                animationLoop: true,
-                video: true,
-                /* reload video on navigation */
-                before: function(){ 
-                    $('video').each(function() { 
-                        $(this).get(0).load(); 
-                    });
-                },
-                after: function(){
-                    $('video').each(function() { 
-                        if($('.flexslider_fade li').hasClass('flex-active-slide')){
-                        $(this).find('video').attr('autoplay', true);
-                    }
-                    });
-                }
-              });
-	  });
+	  $('.play-button').on('click', function () {
+	    $(this).hide();
+	    $(this).parent().fadeOut();
+	    $(this).parent().siblings('.slider-video')[0].play();
+	});
+
+	$('.slider-video').on('play', function () {
+	    $(this).attr('controls', '1');
+	});
 	</script>
 </head>
 
@@ -499,6 +487,30 @@ pre {
         </div>
     </div>
 
+    <section id="video-slider">
+        <center>
+	<div class="video-slider">
+	    <!-- SLIDE 1 -->
+	    <div class="slide">
+		<video class="slider-video" poster="" width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video>
+		<div class="overlay-content">
+		    <div class="play-button"></div>
+		</div>
+	    </div>
+	    <!-- SLIDE 2 -->
+	    <div class="slide">
+		<video class="slider-video" poster="" width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video>
+		</video>
+		<div class="overlay-content">
+		    <div class="play-button"></div>
+		</div>
+	    </div>
+	    <!-- END OF SLIDES -->
+	    <div class="slide-arrow left"></div>
+	    <div class="slide-arrow right"></div>
+	</div>
+        </center>
+    </section>
 
     <section id="demo-sample">
         <center>
