@@ -417,26 +417,40 @@ pre {
 <link rel="stylesheet" href="bootstrap-grid.css">
 
 <script type="text/javascript" src="../js/hidebib.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
-    <head>
-        <title> Physics-Driven Diffusino Models for Impact Sound Synthesis from Videos </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:description" content="Physics-Driven Diffusino Models for Impact Sound Synthesis from Videos"/>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-	
-	<link rel="stylesheet" href="flexslider.css" type="text/css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<script src="jquery.flexslider.js"></script>
-	<script type="text/javascript" charset="utf-8">
-		  $(window).load(function() {
-		    $('.flexslider').flexslider();
-		  });
-		</script>
-<!--         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Physics-Driven Diffusino Models for Impact Sound Synthesis from Videos">
-        <meta name="twitter:description" content="">
-        <meta name="twitter:image" content=""> -->
-    </head>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+<head>
+<title> Physics-Driven Diffusino Models for Impact Sound Synthesis from Videos </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:description" content="Physics-Driven Diffusino Models for Impact Sound Synthesis from Videos"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+<link rel="stylesheet" href="flexslider.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="jquery.flexslider.js"></script>
+<script type="text/javascript" charset="utf-8">
+	  $(window).load(function() {
+	    $('.flexslider').flexslider({
+                slideshow: true,
+                animation: "fade",
+                animationLoop: true,
+                video: true,
+                /* reload video on navigation */
+                before: function(){ 
+                    $('video').each(function() { 
+                        $(this).get(0).load(); 
+                    });
+                },
+                after: function(){
+                    $('video').each(function() { 
+                        if($('.flexslider_fade li').hasClass('flex-active-slide')){
+                        $(this).find('video').attr('autoplay', true);
+                    }
+                    });
+                }
+              });
+	  });
+	</script>
+</head>
 
  <body>
 
@@ -488,7 +502,7 @@ pre {
 
     <section id="demo-sample">
         <center>
-        <div class="flexslider">
+        <div class="flexslider", id="slider">
 	    <ul class="slides">
 		<li>
 		<video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video>
