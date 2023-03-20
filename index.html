@@ -645,7 +645,31 @@ video{
         </center>
     </section>
 	
-    
+    <div class="flexslider">
+	  <ul class="slides">
+	    <li>
+	      <img src="https://www.fillmurray.com/1200/675" />
+	    </li>
+	    <li>
+	      <img src="https://placekitten.com/1200/675" />
+	    </li>
+	    <li>
+	      <p class="flex-caption">Text Over Slide 3</p>
+	      <img src="https://baconmockup.com/1200/675" />
+	    </li>
+	    <li>
+	      <p class="flex-caption">Text Over Slide 4</p>
+	      <img src="https://www.placecage.com/1200/675" />
+	    </li>
+	  </ul>
+	</div>
+    <script type="text/javascript">
+	$(window).load(function() {
+	  $('.flexslider').flexslider({
+	    animation: "slide"
+	  });
+	});
+    </script>
 
     
     <section id="abstract"/>
