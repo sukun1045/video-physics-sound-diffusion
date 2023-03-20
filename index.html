@@ -546,6 +546,67 @@ video{
 				$('.flexslider').flexslider("play");
 			      }
 			}
+			if( active_id == "slide3"){
+			    //play the video and pause the slider
+			      myVideo3.play();
+			      $('.flexslider').flexslider("pause");
+			      //when the video has ended, go to the next slide and play the slider
+			      myVideo3.onended = function(){
+				$('.flexslider').flexslider("next");
+				$('.flexslider').flexslider("play");
+			      }
+			}
+			if( active_id == "slide4"){
+			    //play the video and pause the slider
+			      myVideo4.play();
+			      $('.flexslider').flexslider("pause");
+			      //when the video has ended, go to the next slide and play the slider
+			      myVideo4.onended = function(){
+				$('.flexslider').flexslider("next");
+				$('.flexslider').flexslider("play");
+			      }
+			}
+			    
+			if( active_id == "slide5"){
+			    //play the video and pause the slider
+			      myVideo5.play();
+			      $('.flexslider').flexslider("pause");
+			      //when the video has ended, go to the next slide and play the slider
+			      myVideo5.onended = function(){
+				$('.flexslider').flexslider("next");
+				$('.flexslider').flexslider("play");
+			      }
+			}
+			if( active_id == "slide6"){
+			    //play the video and pause the slider
+			      myVideo6.play();
+			      $('.flexslider').flexslider("pause");
+			      //when the video has ended, go to the next slide and play the slider
+			      myVideo6.onended = function(){
+				$('.flexslider').flexslider("next");
+				$('.flexslider').flexslider("play");
+			      }
+			}
+			if( active_id == "slide7"){
+			    //play the video and pause the slider
+			      myVideo7.play();
+			      $('.flexslider').flexslider("pause");
+			      //when the video has ended, go to the next slide and play the slider
+			      myVideo7.onended = function(){
+				$('.flexslider').flexslider("next");
+				$('.flexslider').flexslider("play");
+			      }
+			}
+			if( active_id == "slide8"){
+			    //play the video and pause the slider
+			      myVideo8.play();
+			      $('.flexslider').flexslider("pause");
+			      //when the video has ended, go to the next slide and play the slider
+			      myVideo8.onended = function(){
+				$('.flexslider').flexslider("next");
+				$('.flexslider').flexslider("play");
+			      }
+			}
 
 		    },
 		  });
@@ -602,15 +663,32 @@ video{
 
     <section id="demo-sample">
         <center>
-        <div class="flexslider" id="slider">
+        <div class="flexslider carousel" id="slider">
 	    <ul class="slides">
 		<li id="slide1" class="slideVideo">
-		<video id="myVideo1" width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video>
+		<video id="myVideo1" width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_1.mp4" type="video/mp4"> </video>
 		</li>
 		<li id="slide2" class="slideVideo">
-		<video id="myVideo2" width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video>
+		<video id="myVideo2" width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_2.mp4" type="video/mp4"> </video>
 		</li>
-	    	
+	    	<li id="slide3" class="slideVideo">
+		<video id="myVideo3" width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_3.mp4" type="video/mp4"> </video>
+		</li>
+		<li id="slide4" class="slideVideo">
+		<video id="myVideo4" width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_4.mp4" type="video/mp4"> </video>
+		</li>
+		<li id="slide5" class="slideVideo">
+		<video id="myVideo5" width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_5.mp4" type="video/mp4"> </video>
+		</li>
+		<li id="slide6" class="slideVideo">
+		<video id="myVideo6" width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_6.mp4" type="video/mp4"> </video>
+		</li>
+		<li id="slide7" class="slideVideo">
+		<video id="myVideo7" width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_7.mp4" type="video/mp4"> </video>
+		</li>
+		<li id="slide8" class="slideVideo">
+		<video id="myVideo8" width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_8.mp4" type="video/mp4"> </video>
+		</li>
 	    </ul>
 	  </div>
 	
@@ -669,227 +747,86 @@ video{
         
 
     <section id="results">
+	    <s2> Applications </s2>
         <hr>
-        <h2>Comparison to Baselines</h2>  
-
+        <h2>Impact Sound Generation from In the Wild Videos</h2>
       <div>
-      <a name="ghsdtv"><h2>Greatest Hits Ten Material Testing Spectrogram Diffusion Demo Videos</h2></a>
-      <div>
-        In this section, we compare the video-driven sound synthesis video to various baselines.
-      </div>
-      &nbsp;
-      <div>
-       Examples are from the Greatest Hits database.
-      </div>
       <table>
         <tbody>
-          <tr>
-            <td align="center"> Video 1 (GT) </td>
-            <td align="center"> Video 1 (uncond) </td>
-            <td align="center"> Video 1 (class cond) </td>
-            <td align="center"> Video 1 (video cond) </td>
-            <td align="center"> Video 1 (video class cond) </td>
-            <td align="center"> Video 1 (video fea + params cond) </td>
-            <td align="center"> Video 1 (video fea + params latent query cond) </td>
-          </tr>
             
           <tr>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_uncond_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_class_only_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_only_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_class_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_fea_params_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_params_latent_video_fea_query_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video></td>
-            
-            
-          </tr>
-	
-	  <tr>
-	    <td align="center"> Video 2 (GT) </td>
-            <td align="center"> Video 2 (uncond) </td>
-            <td align="center"> Video 2 (class cond) </td>
-            <td align="center"> Video 2 (video cond) </td>
-            <td align="center"> Video 2 (video class cond) </td>
-            <td align="center"> Video 2 (video fea + params cond) </td>
-            <td align="center"> Video 2 (video fea + params latent query cond) </td>
-	  </tr>
-          <tr>
-	    <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-02-21-17-42-56_77_156.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_uncond_demo_videos/2015-02-21-17-42-56_77_156.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_class_only_demo_videos/2015-02-21-17-42-56_77_156.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_only_demo_videos/2015-02-21-17-42-56_77_156.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_class_demo_videos/2015-02-21-17-42-56_77_156.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_fea_params_demo_videos/2015-02-21-17-42-56_77_156.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_params_latent_video_fea_query_demo_videos/2015-02-21-17-42-56_77_156.mp4" type="video/mp4"> </video></td>
-              
-	  </tr>
-          <tr>
-            <td align="center"> Video 3 (GT) </td>
-            <td align="center"> Video 3 (uncond) </td>
-            <td align="center"> Video 3 (class cond) </td>
-            <td align="center"> Video 3 (video cond) </td>
-            <td align="center"> Video 3 (video class cond) </td>
-            <td align="center"> Video 3 (video fea + params cond) </td>
-            <td align="center"> Video 3 (video fea + params latent query cond) </td>
-            
-            
-            
-          </tr>
-            
-          <tr>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-02-23-20-23-02_1035_1104.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_uncond_demo_videos/2015-02-23-20-23-02_1035_1104.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_class_only_demo_videos/2015-02-23-20-23-02_1035_1104.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_only_demo_videos/2015-02-23-20-23-02_1035_1104.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_class_demo_videos/2015-02-23-20-23-02_1035_1104.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_fea_params_demo_videos/2015-02-23-20-23-02_1035_1104.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_params_latent_video_fea_query_demo_videos/2015-02-23-20-23-02_1035_1104.mp4" type="video/mp4"> </video></td>
-            
-            
-          </tr>
-          <tr>
-	    <td align="center"> Video 4 (GT) </td>
-            <td align="center"> Video 4 (uncond) </td>
-            <td align="center"> Video 4 (class cond) </td>
-            <td align="center"> Video 4 (video cond) </td>
-            <td align="center"> Video 4 (video class cond) </td>
-            <td align="center"> Video 4 (video fea + params cond) </td>
-            <td align="center"> Video 4 (video fea + params latent query cond) </td>
-	  </tr>
-	  <tr>
-	    <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-03-12-18-56-02_205_275.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_uncond_demo_videos/2015-03-12-18-56-02_205_275.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_class_only_demo_videos/2015-03-12-18-56-02_205_275.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_only_demo_videos/2015-03-12-18-56-02_205_275.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_class_demo_videos/2015-03-12-18-56-02_205_275.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_fea_params_demo_videos/2015-03-12-18-56-02_205_275.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_params_latent_video_fea_query_demo_videos/2015-03-12-18-56-02_205_275.mp4" type="video/mp4"> </video></td>
-              
-	  </tr>
-           <tr>
-            <td align="center"> Video 5 (GT) </td>
-            <td align="center"> Video 5 (uncond) </td>
-            <td align="center"> Video 5 (class cond) </td>
-            <td align="center"> Video 5 (video cond) </td>
-            <td align="center"> Video 5 (video class cond) </td>
-             <td align="center"> Video 5 (video fea + params cond) </td>
-             <td align="center"> Video 5 (video fea + params latent query cond) </td>
-          </tr>
-            
-          <tr>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-03-15-18-54-13_61_127.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_uncond_demo_videos/2015-03-15-18-54-13_61_127.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_class_only_demo_videos/2015-03-15-18-54-13_61_127.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_only_demo_videos/2015-03-15-18-54-13_61_127.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_class_demo_videos/2015-03-15-18-54-13_61_127.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_fea_params_demo_videos/2015-03-15-18-54-13_61_127.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_params_latent_video_fea_query_demo_videos/2015-03-15-18-54-13_61_127.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_9.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_10.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_11.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_12.mp4" type="video/mp4"> </video></td>
           </tr>
 	  <tr>
-	    <td align="center"> Video 6 (GT) </td>
-            <td align="center"> Video 6 (uncond) </td>
-            <td align="center"> Video 6 (class cond) </td>
-            <td align="center"> Video 6 (video cond) </td>
-            <td align="center"> Video 6 (video class cond) </td>
-             <td align="center"> Video 6 (video fea + params cond) </td>
-             <td align="center"> Video 6 (video fea + params latent query cond) </td>
+	    <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_13.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_14.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_15.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_16.mp4" type="video/mp4"> </video></td>
 	  </tr>
-	  <tr>
-	    <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-03-20-01-18-52_837_880.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_uncond_demo_videos/2015-03-20-01-18-52_837_880.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_class_only_demo_videos/2015-03-20-01-18-52_837_880.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_only_demo_videos/2015-03-20-01-18-52_837_880.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_class_demo_videos/2015-03-20-01-18-52_837_880.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_fea_params_demo_videos/2015-03-20-01-18-52_837_880.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_params_latent_video_fea_query_demo_videos/2015-03-20-01-18-52_837_880.mp4" type="video/mp4"> </video></td>
-              
+          <tr>
+	    <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_17.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_18.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_19.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_20.mp4" type="video/mp4"> </video></td>
 	  </tr>
-
-
           <tr>
-            <td align="center"> Video 7 (GT) </td>
-            <td align="center"> Video 7 (uncond) </td>
-            <td align="center"> Video 7 (class cond) </td>
-            <td align="center"> Video 7 (video cond) </td>
-            <td align="center"> Video 7 (video class cond) </td>
-            <td align="center"> Video 7 (video fea + params cond) </td>
-            <td align="center"> Video 7 (video fea + params latent query cond) </td>
-          </tr>
-            
-          <tr>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-09-18-04-36-35-1139_45_94.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_uncond_demo_videos/2015-09-18-04-36-35-1139_45_94.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_class_only_demo_videos/2015-09-18-04-36-35-1139_45_94.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_only_demo_videos/2015-09-18-04-36-35-1139_45_94.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_class_demo_videos/2015-09-18-04-36-35-1139_45_94.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_fea_params_demo_videos/2015-09-18-04-36-35-1139_45_94.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_params_latent_video_fea_query_demo_videos/2015-09-18-04-36-35-1139_45_94.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_21.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_22.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_23.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_24.mp4" type="video/mp4"> </video></td>
           </tr>
 	  <tr>
-  	    <td align="center"> Video 8 (GT) </td>
-            <td align="center"> Video 8 (uncond) </td>
-            <td align="center"> Video 8 (class cond) </td>
-            <td align="center"> Video 8 (video cond) </td>
-            <td align="center"> Video 8 (video class cond) </td>
-            <td align="center"> Video 8 (video fea + params cond) </td>
-            <td align="center"> Video 8 (video fea + params latent query cond) </td>
+	    <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_25.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_26.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_27.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_28.mp4" type="video/mp4"> </video></td>
 	  </tr>
           <tr>
-	    <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-09-27-22-43-25-227_319_370.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_uncond_demo_videos/2015-09-27-22-43-25-227_319_370.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_class_only_demo_videos/2015-09-27-22-43-25-227_319_370.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_only_demo_videos/2015-09-27-22-43-25-227_319_370.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_class_demo_videos/2015-09-27-22-43-25-227_319_370.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_fea_params_demo_videos/2015-09-27-22-43-25-227_319_370.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_params_latent_video_fea_query_demo_videos/2015-09-27-22-43-25-227_319_370.mp4" type="video/mp4"> </video></td>
-              
-	  </tr>
-          <tr>
-            <td align="center"> Video 9 (GT) </td>
-            <td align="center"> Video 9 (uncond) </td>
-            <td align="center"> Video 9 (class cond) </td>
-            <td align="center"> Video 9 (video cond) </td>
-            <td align="center"> Video 9 (video class cond) </td>
-            <td align="center"> Video 9 (video fea + params cond) </td>
-            <td align="center"> Video 9 (video fea + params latent query cond) </td>
-          </tr>
-            
-          <tr>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-10-03-13-39-43-1_1097_1137.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_uncond_demo_videos/2015-10-03-13-39-43-1_1097_1137.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_class_only_demo_videos/2015-10-03-13-39-43-1_1097_1137.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_only_demo_videos/2015-10-03-13-39-43-1_1097_1137.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_class_demo_videos/2015-10-03-13-39-43-1_1097_1137.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_fea_params_demo_videos/2015-10-03-13-39-43-1_1097_1137.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_params_latent_video_fea_query_demo_videos/2015-10-03-13-39-43-1_1097_1137.mp4" type="video/mp4"> </video></td>
-            
-          </tr>
-	  <tr>
-	    <td align="center"> Video 10 (GT) </td>
-            <td align="center"> Video 10 (uncond) </td>
-            <td align="center"> Video 10 (class cond) </td>
-            <td align="center"> Video 10 (video cond) </td>
-            <td align="center"> Video 10 (video class cond) </td>
-            <td align="center"> Video 10 (video fea + params cond) </td>
-            <td align="center"> Video 10 (video fea + params latent query cond) </td>
-	  </tr>
-	  <tr>
-	    <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-10-02-11-26-31-1_1310_1418.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_uncond_demo_videos/2015-10-02-11-26-31-1_1310_1418.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_class_only_demo_videos/2015-10-02-11-26-31-1_1310_1418.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_only_demo_videos/2015-10-02-11-26-31-1_1310_1418.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_class_demo_videos/2015-10-02-11-26-31-1_1310_1418.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_video_fea_params_demo_videos/2015-10-02-11-26-31-1_1310_1418.mp4" type="video/mp4"> </video></td>
-            <td><video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/audio_visual_spec_diff_params_latent_video_fea_query_demo_videos/2015-10-02-11-26-31-1_1310_1418.mp4" type="video/mp4"> </video></td>
-              
+	    <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_29.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_30.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_31.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_32.mp4" type="video/mp4"> </video></td>
 	  </tr>
         </tbody>
       </table>
     </div>
-            </center>
-
-        <!-- <hr> -->
+    <h2> Impact Sound Editing: Fixed Physics Priors for Various Videos </h2>
+      <div>
+	<table>
+        <tbody>
+            
+          <tr>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/fix_physics_priors_cloth_sample_1.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/fix_physics_priors_cloth_sample_2.mp4" type="video/mp4"> </video></td>
+          </tr>
+	  <tr>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/fix_physics_priors_glass_sample_1.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/fix_physics_priors_glass_sample_2.mp4" type="video/mp4"> </video></td>
+          </tr>
+          <tr>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/fix_physics_priors_metal_sample_1.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/fix_physics_priors_metal_sample_2.mp4" type="video/mp4"> </video></td>
+          </tr>
+	</tbody>
+	</table>
+	</div>
+    <h2> Impact Sound Editing: Removing low frequency components </h2>
+      <div>
+	<table>
+        <tbody>
+            
+          <tr>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_priors_remove_low_freq_sample_1.mp4" type="video/mp4"> </video></td>
+            <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_priors_remove_low_freq_sample_2.mp4" type="video/mp4"> </video></td>
+	    <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_priors_remove_low_freq_sample_3.mp4" type="video/mp4"> </video></td>
+          </tr>
+	</tbody>
+	</table>
+	</div>
+        </center>
 
         <hr>
 
