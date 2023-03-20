@@ -500,16 +500,49 @@ video{
 <link rel="stylesheet" href="flexslider.css" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script src="jquery.flexslider.js"></script>
-<script type="text/javascript" charset="utf-8">
-	  $('.play-button').on('click', function () {
-	    $(this).hide();
-	    $(this).parent().fadeOut();
-	    $(this).parent().siblings('.slider-video')[0].play();
-	});
-
-	$('.slider-video').on('play', function () {
-	    $(this).attr('controls', '1');
-	});
+<script>
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "fade",
+    animationLoop: true,
+    video: true,
+    slideshow: true,
+    before: function(){ 
+                    $('video').each(function() { 
+                        $(this).get(0).load(); 
+                    });
+                },
+    after: function(){
+        // sets active_id to the active slide
+        var active_id = $('.flex-active-slide').attr('id');
+        
+       //$('video').trigger('pause');
+       
+       //if the active slide is the video slide...  
+        if( active_id == "slide1"){
+            //play the video and pause the slider
+              myVideo1.play();
+              $('.flexslider').flexslider("pause");
+              //when the video has ended, go to the next slide and play the slider
+              myVideo1.onended = function(){
+                $('.flexslider').flexslider("next");
+                $('.flexslider').flexslider("play");
+              }
+        }
+        if( active_id == "slide2"){
+            //play the video and pause the slider
+              myVideo2.play();
+              $('.flexslider').flexslider("pause");
+              //when the video has ended, go to the next slide and play the slider
+              myVideo2.onended = function(){
+                $('.flexslider').flexslider("next");
+                $('.flexslider').flexslider("play");
+              }
+        }
+        
+    },
+  });
+});
 </script>
 <head>
 <title> Physics-Driven Diffusino Models for Impact Sound Synthesis from Videos </title>
@@ -564,31 +597,6 @@ video{
             </div>
         </div>
     </div>
-	    
-    <section id="video-slider">
-        <center>
-	<div class="video-slider">
-	    <!-- SLIDE 1 -->
-	    <div class="slide">
-		<video class="slider-video" poster="" width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video>
-		<div class="overlay-content">
-		    <div class="play-button"></div>
-		</div>
-	    </div>
-	    <!-- SLIDE 2 -->
-	    <div class="slide">
-		<video class="slider-video" poster="" width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video>
-		</video>
-		<div class="overlay-content">
-		    <div class="play-button"></div>
-		</div>
-	    </div>
-	    <!-- END OF SLIDES -->
-	    <div class="slide-arrow left"></div>
-	    <div class="slide-arrow right"></div>
-	</div>
-        </center>
-    </section>
 
     <section id="video-slider">
         <center>
@@ -619,15 +627,13 @@ video{
         <center>
         <div class="flexslider", id="slider">
 	    <ul class="slides">
-		<li>
+		<li id="slide1">
 		<video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video>
 		</li>
-		<li>
+		<li id="slide2">
 		<video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video>
 		</li>
-	    	<li>
-		<video width="256px" height="256px" controls="controls"/> <source src="https://sukun.s3.us-west-2.amazonaws.com/audio_visual_physics_sound/gt_demo_videos/2015-02-16-17-08-51_1092_1221.mp4" type="video/mp4"> </video>
-		</li>
+	    	
 	    </ul>
 	  </div>
 
