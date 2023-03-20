@@ -4,7 +4,7 @@
 <html>
 
 <script src="bootstrap.js"></script>
-<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script src="load-mathjax.js" async></script>
 <script src="jquery.flexslider.js"></script>
 <script>
@@ -424,6 +424,9 @@ pre {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta property="og:description" content="Physics-Driven Diffusino Models for Impact Sound Synthesis from Videos"/>
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+	 $(window).load(function() {
+	    $('.flexslider').flexslider();
+	  });
 <!--         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Physics-Driven Diffusino Models for Impact Sound Synthesis from Videos">
         <meta name="twitter:description" content="">
@@ -431,11 +434,6 @@ pre {
     </head>
 
  <body>
-<script type="text/javascript" charset="utf-8">
-  $(window).load(function() {
-    $('.flexslider').flexslider();
-  });
-</script>
 
 
 <div class="container">
