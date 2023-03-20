@@ -499,10 +499,6 @@ video{
 <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="flexslider.css" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src="jquery.flexslider.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/jquery.flexslider-min.js"></script>
-
 <head>
 	<title> Physics-Driven Diffusino Models for Impact Sound Synthesis from Videos </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -511,6 +507,50 @@ video{
 	<link rel="stylesheet" type="text/css" href="flexslider/flexslider.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 	<script type="text/javascript" src="flexslider/jquery.flexslider-min.js"></script>
+	<script type="text/javascript">
+		$(window).load(function() {
+		  $('.flexslider').flexslider({
+		    animation: "fade",
+		    animationLoop: true,
+		    video: true,
+		    slideshow: true,
+		    before: function(){ 
+				    $('video').each(function() { 
+					$(this).get(0).load(); 
+				    });
+				},
+		    after: function(){
+			// sets active_id to the active slide
+			var active_id = $('.flex-active-slide').attr('id');
+
+		       //$('video').trigger('pause');
+
+		       //if the active slide is the video slide...  
+			if( active_id == "slide1"){
+			    //play the video and pause the slider
+			      myVideo1.play();
+			      $('.flexslider').flexslider("pause");
+			      //when the video has ended, go to the next slide and play the slider
+			      myVideo1.onended = function(){
+				$('.flexslider').flexslider("next");
+				$('.flexslider').flexslider("play");
+			      }
+			}
+			if( active_id == "slide2"){
+			    //play the video and pause the slider
+			      myVideo2.play();
+			      $('.flexslider').flexslider("pause");
+			      //when the video has ended, go to the next slide and play the slider
+			      myVideo2.onended = function(){
+				$('.flexslider').flexslider("next");
+				$('.flexslider').flexslider("play");
+			      }
+			}
+
+		    },
+		  });
+		});
+	</script>
 </head>
 
  <body>
@@ -560,7 +600,7 @@ video{
         </div>
     </div>
 
-    <section id="video-slider">
+<!--     <section id="video-slider">
         <center>
 	<div class="video-slider">
 	    <!-- SLIDE 1 -->
@@ -583,7 +623,7 @@ video{
 	    <div class="slide-arrow right"></div>
 	</div>
         </center>
-    </section>
+    </section> -->
 
     <section id="demo-sample">
         <center>
@@ -598,78 +638,9 @@ video{
 	    	
 	    </ul>
 	  </div>
-	<script type="text/javascript">
-		$(window).load(function() {
-		  $('.flexslider').flexslider({
-		    animation: "fade",
-		    animationLoop: true,
-		    video: true,
-		    slideshow: true,
-		    before: function(){ 
-				    $('video').each(function() { 
-					$(this).get(0).load(); 
-				    });
-				},
-		    after: function(){
-			// sets active_id to the active slide
-			var active_id = $('.flex-active-slide').attr('id');
-
-		       //$('video').trigger('pause');
-
-		       //if the active slide is the video slide...  
-			if( active_id == "slide1"){
-			    //play the video and pause the slider
-			      myVideo1.play();
-			      $('.flexslider').flexslider("pause");
-			      //when the video has ended, go to the next slide and play the slider
-			      myVideo1.onended = function(){
-				$('.flexslider').flexslider("next");
-				$('.flexslider').flexslider("play");
-			      }
-			}
-			if( active_id == "slide2"){
-			    //play the video and pause the slider
-			      myVideo2.play();
-			      $('.flexslider').flexslider("pause");
-			      //when the video has ended, go to the next slide and play the slider
-			      myVideo2.onended = function(){
-				$('.flexslider').flexslider("next");
-				$('.flexslider').flexslider("play");
-			      }
-			}
-
-		    },
-		  });
-		});
-	</script>
+	
         </center>
     </section>
-	
-    <div class="flexslider">
-	  <ul class="slides">
-	    <li>
-	      <img src="https://www.fillmurray.com/1200/675" />
-	    </li>
-	    <li>
-	      <img src="https://placekitten.com/1200/675" />
-	    </li>
-	    <li>
-	      <p class="flex-caption">Text Over Slide 3</p>
-	      <img src="https://baconmockup.com/1200/675" />
-	    </li>
-	    <li>
-	      <p class="flex-caption">Text Over Slide 4</p>
-	      <img src="https://www.placecage.com/1200/675" />
-	    </li>
-	  </ul>
-	</div>
-    <script type="text/javascript">
-	$(window).load(function() {
-	  $('.flexslider').flexslider({
-	    animation: "slide"
-	  });
-	});
-    </script>
 
     
     <section id="abstract"/>
