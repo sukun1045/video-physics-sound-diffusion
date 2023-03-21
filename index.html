@@ -510,9 +510,11 @@ video{
 	<script type="text/javascript">
 		$(window).load(function() {
 		  $('.flexslider').flexslider({
-		    animation: "fade",
+		    animation: "slide",
 		    animationLoop: false,
-		    minItems: 4,
+		    itemWidth: 210,
+	   	    itemMargin: 5,
+		    minItems: 2,
     		    maxItems: 4,
 		    video: true,
 		    slideshow: true,
@@ -665,7 +667,7 @@ video{
 
     <section id="demo-sample">
         <center>
-        <div class="flexslider" id="slider">
+        <div class="flexslider carousel" id="slider">
 	    <ul class="slides">
 		<li id="slide1" class="slideVideo">
 		<video id="myVideo1" width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_1.mp4" type="video/mp4"> </video>
