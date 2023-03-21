@@ -510,8 +510,10 @@ video{
 	<script type="text/javascript">
 		$(window).load(function() {
 		  $('.flexslider').flexslider({
-		    animation: "fade",
-		    animationLoop: true,
+		    animation: "slide",
+		    animationLoop: false,
+		    minItems: 1,
+    		    maxItems: 4
 		    video: true,
 		    slideshow: true,
 		    before: function(){ 
@@ -663,7 +665,7 @@ video{
 
     <section id="demo-sample">
         <center>
-        <div class="flexslider carousel" id="slider">
+        <div class="flexslider" id="slider">
 	    <ul class="slides">
 		<li id="slide1" class="slideVideo">
 		<video id="myVideo1" width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_driven_diffusion_model_sample_1.mp4" type="video/mp4"> </video>
@@ -747,7 +749,6 @@ video{
         
 
     <section id="results">
-	    <s2> Applications </s2>
         <hr>
         <h2>Impact Sound Generation from In the Wild Videos</h2>
       <div>
@@ -793,7 +794,7 @@ video{
         </tbody>
       </table>
     </div>
-    <h2> Impact Sound Editing: Fixed Physics Priors for Various Videos </h2>
+    <h2> Same Physics Priors For Various Videos </h2>
       <div>
 	<table>
         <tbody>
@@ -813,16 +814,17 @@ video{
 	</tbody>
 	</table>
 	</div>
-    <h2> Impact Sound Editing: Removing low frequency components </h2>
+    <h2> Impact Sound Editing via Removing low frequency Physics Priors</h2>
       <div>
 	<table>
         <tbody>
-            
+          <center>  
           <tr>
             <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_priors_remove_low_freq_sample_1.mp4" type="video/mp4"> </video></td>
             <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_priors_remove_low_freq_sample_2.mp4" type="video/mp4"> </video></td>
 	    <td><video width="256px" height="256px" controls="controls"/> <source src="video_samples/physics_priors_remove_low_freq_sample_3.mp4" type="video/mp4"> </video></td>
           </tr>
+	  </center>	
 	</tbody>
 	</table>
 	</div>
