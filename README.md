@@ -1,4 +1,4 @@
-# physics-driven-diffusion-models-for-impact-sound-synthesis-from-videos
+# physics-driven diffusion models for impact sound synthesis from videos (CVPR 2023)
 
 [Project Page](https://sukun1045.github.io/video-physics-sound-diffusion/)
 
