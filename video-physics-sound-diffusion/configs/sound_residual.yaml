@@ -1,0 +1,41 @@
+output_dir: 'great_hits_sound_residual/'
+device: 'cuda'
+dist_backend: 'nccl'
+log_dir: 'logs/'
+result_dir: 'results/'
+seed: 42
+workers: 4
+pi: 'psnr'
+dataset:
+  name: 'GreatHits'
+  file: 'GreatHitsAudioDataset'
+  data_root: '/data/great_hits/'
+  img_num_per_gpu: 16
+  train:
+    drop_last: True
+    shuffle: True
+    chunk: 400
+  test:
+    drop_last: False
+    shuffle: True
+    chunk: 2000
+render:
+#  resume_path:
+  file: 'SoundResidualRender'
+train:
+  file: 'SoundResidualTrainer'
+  criterion_file: 'SoundResidualCriterion'
+  resume: True
+  lr: 5e-4 #0.01 #5e-4
+  gamma: 0.1 #exponentiallr scheduler
+  decay_epochs: 50 #exponentiallr scheduler
+  weight_decay: 0.0001 #adamW
+  max_epoch: 200
+  print_freq: 10
+  save_every_checkpoint: True
+  save_interval: 1
+  valiter_interval: 200
+  val_when_train: True
+test:
+  save_imgs: False
+  is_vis: True
