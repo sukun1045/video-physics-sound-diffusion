@@ -4,4 +4,6 @@
 
 [Paper Link](https://arxiv.org/abs/2303.16897)
 
-Code: Coming Soon
+Code is available now under the folder [video-physics-sound-diffusion](https://github.com/sukun1045/video-physics-sound-diffusion/tree/main/video-physics-sound-diffusion)!
+
+More instructions are coming.
