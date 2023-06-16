@@ -25,11 +25,11 @@ import librosa
 import soundfile as sf
 
 def parse_args():
-    parser = argparse.ArgumentParser(description='Neural Acoustic')
+    parser = argparse.ArgumentParser(description='Video physics sound diffusion')
     parser.add_argument(
         '--cfg',
         dest='yaml_file',
-        help='experiment configure file name, e.g. configs/base_config.yaml',
+        help='experiment configure file name, e.g. configs/.yaml',
         required=True,
         type=str)
     # default distributed training
