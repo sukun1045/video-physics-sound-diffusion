@@ -8,8 +8,7 @@ from queue import Queue
 Given individual video files (mp4, webm) on disk, creates a folder for
 every video file and saves the video's RGB frames as jpeg files in that
 folder.
-It can be used to turn Kinetics 400, which comes as
-many ".mp4" files, into an RGB folder for each ".mp4" file.
+It can be used to turn many ".mp4" files, into an RGB folder for each ".mp4" file.
 Uses multithreading to extract frames faster.
 Modify the two filepaths at the bottom and then run this script.
 """
