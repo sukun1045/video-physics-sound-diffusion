@@ -20,14 +20,11 @@ Code is available now under the folder [video-physics-sound-diffusion](https://g
 
 ### Prepare Data
 - Download the [Greatest Hits dataset](https://andrewowens.com/vis/) videos and metadata (txt files).
-- The dataset has the following stats:
-  - tot sound:  46577
-  - material stats: {'gravel': 437, 'dirt': 3279, 'rock': 2795, 'None': 18133, 'wood': 4587, 'cloth': 2085, 'metal': 4118, 'paper': 1802, 'grass': 981, 'leaf': 2515, 'plastic': 2176, 'tile': 349, 'drywall': 698, 'plastic-bag': 440, 'carpet': 377, 'glass': 382, 'water': 986, 'ceramic': 437}
-  - action stats: {'hit': 19619, 'None': 17942, 'scratch': 9016}
 - Use [video_to_frames.py](https://github.com/sukun1045/video-physics-sound-diffusion/blob/main/video_to_frames.py) to extract rgb frames from video and save as 224x224 images. Processed rgb frames are available in [Google Drive](https://drive.google.com/drive/folders/1nsT79lghHkQqr9KvEyAHUbQDwsur5kbi?usp=sharing) (zip file name: **rgb**).
-- Use [video_to_wav.py](https://github.com/sukun1045/video-physics-sound-diffusion/blob/main/video-physics-sound-diffusion/tools/video_to_wavs.py) to extract impact sound segments from videos. Extracted audio files are available [Google Drive](https://drive.google.com/drive/folders/1nsT79lghHkQqr9KvEyAHUbQDwsur5kbi?usp=sharing) (zip file name: **audio_data**).
-- Use [extract_physics_params.py](https://github.com/sukun1045/video-physics-sound-diffusion/blob/main/video-physics-sound-diffusion/tools/extract_physics_params.py) to extract physics parameters from audio and save freq, power, decay rate, gt, and reconstructed audio as pickle file.
-- Use [train_test_split_process_video_data.py](https://github.com/sukun1045/video-physics-sound-diffusion/blob/main/video-physics-sound-diffusion/tools/train_test_split_process_video_data.py) to segment the video frames and save train/test meta files. Processd meta files are in [Google Drive](https://drive.google.com/drive/folders/1nsT79lghHkQqr9KvEyAHUbQDwsur5kbi?usp=sharing) (**segmented_video_data_split**).
+- Use [video_to_wav.py](https://github.com/sukun1045/video-physics-sound-diffusion/blob/main/video-physics-sound-diffusion/tools/video_to_wavs.py) to extract impact sound segments from videos. Extracted audio files are available in [Google Drive](https://drive.google.com/drive/folders/1nsT79lghHkQqr9KvEyAHUbQDwsur5kbi?usp=sharing) (zip file name: **audio_data**).
+- Use [extract_physics_params.py](https://github.com/sukun1045/video-physics-sound-diffusion/blob/main/video-physics-sound-diffusion/tools/extract_physics_params.py) to extract physics parameters from audio and save freq, power, decay rate, ground truth audio, and reconstructed audio as pickle file.
+  - Note: we mainly use the subset annotated with **hits** action and **static** reaction. This ends up at ten representative classes of materials (glass, wood, ceramic, metal, cloth, plastic, drywall, carpet, paper, and rock) in a total of 10k impact sounds.
+- Use [train_test_split_process_video_data.py](https://github.com/sukun1045/video-physics-sound-diffusion/blob/main/video-physics-sound-diffusion/tools/train_test_split_process_video_data.py) to segment the video frames and save train/test meta files. Processed meta files are in [Google Drive](https://drive.google.com/drive/folders/1nsT79lghHkQqr9KvEyAHUbQDwsur5kbi?usp=sharing) (**segmented_video_data_split**).
 
 ### Training and Inference for Sound Physics and Residual Prediction
 - Check the [sound_residual.yaml](https://github.com/sukun1045/video-physics-sound-diffusion/blob/main/video-physics-sound-diffusion/configs/sound_residual.yaml) and change the data root or other settings if needed.
