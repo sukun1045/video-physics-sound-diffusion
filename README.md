@@ -54,6 +54,10 @@ If you find this repo useful for your research, please consider citing the paper
   pages={9749--9759},
   year={2023}
 }
-# Reference
+# Acknowledgements
 Part of the code is borrowed from the following repo and we would like to thank the authors for their contribution.
 - https://github.com/lucidrains/denoising-diffusion-pytorch
+  
+We would like to thank the authors of <cite><a href="https://andrewowens.com/vis/">the Greatest Hits dataset</a></cite> for making this dataset possible.
+		We would like to thank <cite><a href="https://vinayak-agarwal.com/">Vinayak Agarwal</a></cite> for his suggestions on physics mode parameters estimation from raw audio.
+		We would like to thank the authors of <cite><a href="https://sites.google.com/view/diffimpact">DiffImpact</a></cite> for inspiring us to use the physics-based sound synthesis method to design physics priors as a conditional signal to guide the deep generative model synthesizes impact sounds from videos.
