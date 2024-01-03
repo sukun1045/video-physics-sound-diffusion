@@ -133,11 +133,6 @@ save_root = 'results/great_hits_ten_mat_spec_diff_params_latent_video_fea_query/
 
 os.makedirs(save_root, exist_ok=True)
 Trainer.render.eval()
-demo_list = ['2015-02-16-17-08-51', '2015-02-21-17-42-56',
-             '2015-02-23-20-23-02', '2015-03-12-18-56-02',
-             '2015-03-15-18-54-13', '2015-03-20-01-18-52',
-             '2015-09-18-04-36-35-1139', '2015-09-27-22-43-25-227',
-             '2015-10-03-13-39-43-1', '2015-10-02-11-26-31-1']
 new_list = []
 spec_max = 5.9540715
 spec_min = -18.420681
@@ -146,10 +141,6 @@ with torch.no_grad():
         raw_data = eval_dataset.data[i]
         fn = raw_data['fn']
         tmp = fn.split('_')[0]
-        select_tmp = f'{tmp}'
-        print(select_tmp)
-        if select_tmp not in demo_list:
-            continue
         print(fn)
         val_data = Trainer._read_inputs(val_data)
         latent, video_fea, spec = val_data
