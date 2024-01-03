@@ -281,7 +281,7 @@ class Unet3D(nn.Module):
     def __init__(
         self,
         dim,
-        cond_dim = 256 + 2048, # physics + video fea
+        cond_dim = 256 + 17, # physics + video fea
         out_dim = None,
         dim_mults=(1, 2, 4, 8),
         channels = 1,
