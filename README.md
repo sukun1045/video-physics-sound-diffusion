@@ -39,11 +39,11 @@ Code is available now under the folder [video-physics-sound-diffusion](https://g
 - Under the `video-physics-sound-diffusion` directory, run `CUDA_VISIBLE_DEVICES=0 python tools/train.py --cfg configs/great_hits_spec_diff.yaml`
 
 ### Generating Samples
-- change the `resume_path` in `great_hits_spec_diff.yaml` to be your model path.
-- Under the `video-physics-sound-diffusion` directory, run `CUDA_VISIBLE_DEVICES=0 python tools/extract_latents.py --cfg configs/great_hits_spec_diff.yaml` to extract physics latents and save as pickle files.
-- Under the `video-physics-sound-diffusion` directory, run `CUDA_VISIBLE_DEVICES=0 python tools/query_latents.py --cfg configs/great_hits_spec_diff.yaml` that will use test visual feature to query closest physics latent in training set.
-- Run `CUDA_VISIBLE_DEVICES=0 python tools/generate_samples.py --configs confings/great_hits_spec_diff.yaml` to generate wave file.
-- **Pre-trained Model** is coming soon.
+- Step 0: change the `resume_path` in `great_hits_spec_diff.yaml` to be your model path.
+- Step 1: Under the `video-physics-sound-diffusion` directory, run `CUDA_VISIBLE_DEVICES=0 python tools/extract_latents.py --cfg configs/great_hits_spec_diff.yaml` to extract physics latents and save as pickle files.
+- Step 2: Under the `video-physics-sound-diffusion` directory, run `CUDA_VISIBLE_DEVICES=0 python tools/query_latents.py --cfg configs/great_hits_spec_diff.yaml` that will use test visual feature to query closest physics latent in training set.
+- Step 3: Run `CUDA_VISIBLE_DEVICES=0 python tools/generate_samples.py --configs confings/great_hits_spec_diff.yaml` to generate wave file.
+- Using **Pre-trained Model**: Please first download the [processed data](https://drive.google.com/drive/folders/1ara2GL2mA9tcN4e48JJY21xh0DZGNStj?usp=drive_link), then place them under the *data_root* you use in the *config* file. Also, download the [model weights](https://drive.google.com/drive/folders/1rbqOOPJcfsArt69X6vb7A3rWjlqYXcuZ?usp=drive_link) and place it under the *logs* folder. Then, run **Step 3** to generate samples.
 - [ ] TODO: Add a jupyter notebook for an easier demo.
 
 # Citation
