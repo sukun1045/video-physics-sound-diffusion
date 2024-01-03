@@ -35,8 +35,8 @@ Code is available now under the folder [video-physics-sound-diffusion](https://g
 
 ### Training for Physics-driven video to Impact Sound Diffusion
 - We use visual features extracted from pre-trained resnet 50 + TSM. Processed visual features are available in [Google Drive](https://drive.google.com/drive/folders/1nsT79lghHkQqr9KvEyAHUbQDwsur5kbi?usp=sharing).
-- Check the [great_hits_spec_diff.yaml](https://github.com/sukun1045/video-physics-sound-diffusion/blob/main/video-physics-sound-diffusion/configs/great_hits_spec_diff.yaml) and change the data root or otther settings if needed.
-- Under the `video-physics-sound-diffusion` directory, run `CUDA_VISIBLE_DEVICES=0 python tools/train.py --configs configs/great_hits_spec_diff.yaml`
+- Check the [great_hits_spec_diff.yaml](https://github.com/sukun1045/video-physics-sound-diffusion/blob/main/video-physics-sound-diffusion/configs/great_hits_spec_diff.yaml) and change the data root or other settings if needed.
+- Under the `video-physics-sound-diffusion` directory, run `CUDA_VISIBLE_DEVICES=0 python tools/train.py --cfg configs/great_hits_spec_diff.yaml`
 
 ### Generating Samples
 - change the `resume_path` in `great_hits_spec_diff.yaml` to be your model path.
