@@ -29,7 +29,7 @@ Code is available now under the folder [video-physics-sound-diffusion](https://g
 ### Training and Inference for Sound Physics and Residual Prediction
 - Check the [sound_residual.yaml](https://github.com/sukun1045/video-physics-sound-diffusion/blob/main/video-physics-sound-diffusion/configs/sound_residual.yaml) and change the data root or other settings if needed.
 - Under the `video-physics-sound-diffusion` directory, run `CUDA_VISIBLE_DEVICES=0 python tools/sound_residual_train.py --configs configs/sound_residual.yaml`
-- Once done with training, change the `resume_path` in `sound_residual.yaml` to be your model path or use the pre-trained model [here](video-physics-sound-diffusion/logs/sound_residual/sound_residual) and you can run `CUDA_VISIBLE_DEVICES=0 python tools/sound_residual_infer.py --cfg configs/sound_residual.yaml` to save both physics and predicted residual parameters as pickle file.
+- Once done with training, change the `resume_path` in `sound_residual.yaml` to be your model path or use the **pre-trained model** [here](video-physics-sound-diffusion/logs/sound_residual/sound_residual) and you can run `CUDA_VISIBLE_DEVICES=0 python tools/sound_residual_infer.py --cfg configs/sound_residual.yaml` to save both physics and predicted residual parameters as pickle file.
 - Predicted physics and residual parameters are available in [Google Drive](https://drive.google.com/drive/folders/1nsT79lghHkQqr9KvEyAHUbQDwsur5kbi?usp=sharing).
 - [ ] TODO: Add a jupyter notebook to demonstrate how to reconstruct the sound.
 
@@ -43,6 +43,7 @@ Code is available now under the folder [video-physics-sound-diffusion](https://g
 - Under the `video-physics-sound-diffusion` directory, run `CUDA_VISIBLE_DEVICES=0 python tools/extract_latents.py --cfg configs/great_hits_spec_diff.yaml` to extract physics latents and save as pickle files.
 - Under the `video-physics-sound-diffusion` directory, run `CUDA_VISIBLE_DEVICES=0 python tools/query_latents.py --cfg configs/great_hits_spec_diff.yaml` that will use test visual feature to query closest physics latent in training set.
 - Run `CUDA_VISIBLE_DEVICES=0 python tools/generate_samples.py --configs confings/great_hits_spec_diff.yaml` to generate wave file.
+- **Pre-trained Model** is coming soon.
 - [ ] TODO: Add a jupyter notebook for an easier demo.
 
 # Citation
