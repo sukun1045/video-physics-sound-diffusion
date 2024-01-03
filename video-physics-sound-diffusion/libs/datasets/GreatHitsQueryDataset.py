@@ -11,7 +11,7 @@ class GreatHitsDataset(Dataset):
     def __init__(self, data_root, split='train'):
         super(GreatHitsDataset, self).__init__()
         self.video_root = data_root + f'hits_100_mode_data_ten_video/{split}.pickle'
-        self.video_fea_root = data_root + f'hits_ten_mat_video_classifer_all_features/{split}.pickle'
+        self.video_fea_root = data_root + f'hits_ten_mat_video_classifer_features/{split}.pickle'
         self.audio_root = data_root + 'hits_100_mode_data_ten'
         self.latent_root = data_root + f'hits_ten_mat_spec_diff_params_latent_video_fea_latents/query_{split}.pickle'
         self.split = split
