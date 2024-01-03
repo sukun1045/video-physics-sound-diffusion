@@ -5,7 +5,6 @@ log_dir: 'logs/'
 result_dir: 'results/'
 seed: 42
 workers: 4
-pi: 'psnr'
 dataset:
   name: 'GreatHits'
   file: 'GreatHitsAudioDataset'
