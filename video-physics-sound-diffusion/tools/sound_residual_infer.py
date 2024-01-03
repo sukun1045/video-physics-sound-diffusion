@@ -114,7 +114,6 @@ Trainer = getattr(impm(cfg.train.file), 'Trainer')(
     lr_scheduler=None,
     logger=None,
     log_dir=cfg.log_dir,
-    performance_indicator=cfg.pi,
     last_iter=-1,
     rank=0,
     device=device,
