@@ -19,7 +19,7 @@ dataset:
     shuffle: True
     chunk: 2000
 render:
-#  resume_path:
+#  resume_path: 'logs/sound_residual/sound_residual/model_best.pth'
   file: 'SoundResidualRender'
 train:
   file: 'SoundResidualTrainer'
