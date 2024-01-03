@@ -7,6 +7,16 @@
 ## Code
 Code is available now under the folder [video-physics-sound-diffusion](https://github.com/sukun1045/video-physics-sound-diffusion/tree/main/video-physics-sound-diffusion)!
 
+### Pre-processed data and Pre-trained Weights Links
+- [meta data](https://drive.google.com/drive/folders/1Zytmma_OsVF_5HbW_S0TODhiz8tMYunr?usp=drive_link)
+- [rgb frames](https://drive.google.com/file/d/19Yyzc_m8aSPffZwwk0LsubGkh00L6mb1/view?usp=drive_link)
+- [audio](https://drive.google.com/file/d/1HmMAbxedeJ7fCMHnEFLZVlRJLStVT_xf/view?usp=drive_link)
+- [pre-trained residual prediction model](video-physics-sound-diffusion/logs/sound_residual/sound_residual)
+- [extracted sound physics and residual parameters](https://drive.google.com/file/d/1lAqp97iNWYTTd0gUahKf8BeMAN1Ap9Z6/view?usp=drive_link)
+- [extracted visual features](https://drive.google.com/file/d/1s_xQaLsHeNvrjEk9sl4w2DMAaYfMN_jQ/view?usp=drive_link)
+- [extracted physics latents](https://drive.google.com/file/d/11OpVCg5pITjlCautJ4ch7lutA4gW31gT/view?usp=drive_link)
+- [pre-trained diffusion model](https://drive.google.com/drive/folders/19lnjIGzVvR5uYZnMjDF0RPNKRrbUTBfg?usp=drive_link)
+
 ### Requirement
 - python=3.9
 - pytorch=1.12.0
@@ -29,12 +39,12 @@ Code is available now under the folder [video-physics-sound-diffusion](https://g
 ### Training and Inference for Sound Physics and Residual Prediction
 - Check the [sound_residual.yaml](https://github.com/sukun1045/video-physics-sound-diffusion/blob/main/video-physics-sound-diffusion/configs/sound_residual.yaml) and change the data root or other settings if needed.
 - Under the `video-physics-sound-diffusion` directory, run `CUDA_VISIBLE_DEVICES=0 python tools/sound_residual_train.py --configs configs/sound_residual.yaml`
-- Once done with training, change the `resume_path` in `sound_residual.yaml` to be your model path or use the **pre-trained model** [here](video-physics-sound-diffusion/logs/sound_residual/sound_residual) and you can run `CUDA_VISIBLE_DEVICES=0 python tools/sound_residual_infer.py --cfg configs/sound_residual.yaml` to save both physics and predicted residual parameters as pickle file.
-- Predicted physics and residual parameters are available in [Google Drive](https://drive.google.com/drive/folders/1nsT79lghHkQqr9KvEyAHUbQDwsur5kbi?usp=sharing).
+- Once done with training, change the `resume_path` in `sound_residual.yaml` to be your model path or use the **pre-trained model** [here](video-physics-sound-diffusion/logs/sound_residual/sound_residual) and you can run `CUDA_VISIBLE_DEVICES=0 python tools/sound_residual_infer.py --cfg configs/sound_residual.yaml` to save both physics and predicted residual parameters as *pickle* file.
 - [ ] TODO: Add a jupyter notebook to demonstrate how to reconstruct the sound.
 
 ### Training for Physics-driven video to Impact Sound Diffusion
-- We use visual features extracted from pre-trained resnet 50 + TSM. Processed visual features are available in [Google Drive](https://drive.google.com/drive/folders/1nsT79lghHkQqr9KvEyAHUbQDwsur5kbi?usp=sharing).
+- You must obtain the audio physics and residual parameters before training the diffusion model. 
+- We use the visual features extracted from pre-trained resnet 50 + TSM classifier. We provide two types of features: 1) features before the classifier layer are available in [here](https://drive.google.com/drive/folders/1nsT79lghHkQqr9KvEyAHUbQDwsur5kbi?usp=sharing) and the simple lower dimension logits [here](https://drive.google.com/file/d/1s_xQaLsHeNvrjEk9sl4w2DMAaYfMN_jQ/view?usp=drive_link).
 - Check the [great_hits_spec_diff.yaml](https://github.com/sukun1045/video-physics-sound-diffusion/blob/main/video-physics-sound-diffusion/configs/great_hits_spec_diff.yaml) and change the data root or other settings if needed.
 - Under the `video-physics-sound-diffusion` directory, run `CUDA_VISIBLE_DEVICES=0 python tools/train.py --cfg configs/great_hits_spec_diff.yaml`
 
