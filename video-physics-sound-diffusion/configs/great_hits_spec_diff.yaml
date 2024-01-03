@@ -19,7 +19,7 @@ dataset:
     shuffle: True
     chunk: 2000
 render:
-#  resume_path:
+#    resume_path: 'logs/great_hits_params_latent_video_fea_spec_diff/great_hits_params_latent_video_fea_spec_diff/model_best.pth'
   file: 'GreatHitsDiffRender'
 train:
   file: 'GreatHitsDiffTrainer'
