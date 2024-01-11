@@ -17,6 +17,8 @@ Code is available now under the folder [video-physics-sound-diffusion](https://g
 - [extracted physics latents](https://drive.google.com/file/d/11OpVCg5pITjlCautJ4ch7lutA4gW31gT/view?usp=drive_link)
 - [pre-trained diffusion model](https://drive.google.com/drive/folders/19lnjIGzVvR5uYZnMjDF0RPNKRrbUTBfg?usp=drive_link)
 
+For questions or help, please open an issue or contact suk4 at uw dot edu
+
 ### Requirement
 - python=3.9
 - pytorch=1.12.0
